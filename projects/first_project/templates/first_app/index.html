@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>myapp</title>
+    </head>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <body>
+      <div class="jumbotron">
+        <div class="container">
+          <h1>{% include "first_app/includes/includes/other.html" %}</h1>
+          {% block content %}
+          {% endblock %}
+
+          <p>
+            <a href="/" class="btn btn-success btn-lg">Main Page</a>
+            <a href="/news" class="btn btn-primary btn-lg">News &raquo;</a>
+            <a href="/contact" class="btn btn-info btn-lg">Contacts &raquo;</a>
+          </p>
+
+        </div>
+      </div>
+      <div class="container">
+        <img src="{% static 'images/mercedes.jpg' %}" class="img-thumbnail">
+        <hr>
+        &copy; Все права защищены 2018
+      </div>
+    </body>
+</html>
